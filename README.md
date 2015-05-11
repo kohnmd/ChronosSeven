@@ -69,30 +69,44 @@ void loop() {
 
 Unless otherwise noted, most functions are used to manipulate the bytes inside of the shift registers, and will not affect the display until `display()` is called.
 
-`void setPins(int latchPin, int clockPin, int dataPin)`
+```Arduino
+void setPins(int latchPin, int clockPin, int dataPin)
+```
 
 Sets the output pins going to the first shift register. Resets the display and sets all register pins to `LOW`.
 
-`void setTime(int h, int m)`
+```Arduino
+void setTime(int h, int m)
+```
 
 Sets the time that should be displayed. Internally calls `setHours(h)` and `setMinutes(m)`.
 
-`void setHours(int h)`
+```Arduino
+void setHours(int h)
+```
 
 Sets just the hours that should be displayed, in case you want to control those independently of the minutes.
 
-`void setMinutes(int m)`
+```Arduino
+void setMinutes(int m)
+```
 
 Sets just the minutes that should be displayed, in case you want to control those independently of the hours.
 
-`void clear()`
+```Arduino
+void clear()
+```
 
 Sets all register pins to `LOW`, effectively turning off the entire display.Opposite of `blast()`.
 
-`void blast()`
+```Arduino
+void blast()
+```
 
 Sets all register pins to `HIGH`, effectively turning on the entire display. Opposite of `clear()`.
 
-`void display()`
+```Arduino
+void display()
+```
 
 Triggers the `latchPin` to actually display the data that has been shifted into the registers. This will usually be called after any method that's intended to change the display.
