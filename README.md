@@ -2,6 +2,8 @@
 
 The purpose of this Arduino library is to display the current time using four custom 7-segment displays, each controlled by its own shift register. 
 
+Significant credit goes to [Qtechknow's Pineapple](https://github.com/Qtechknow/Arduino-Libraries/tree/master/Pineapple) 7-segment LED library, and the official [Arduino shiftOut tutorial](http://www.arduino.cc/en/Tutorial/ShiftOut). Both contributed helpful code examples and inspiration for this library.
+
 
 ## Hardware Setup
 
